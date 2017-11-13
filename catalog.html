@@ -3,313 +3,322 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>HTML Academy: Барбершоп</title>
+	<title>HTML Academy: Глейси</title>
 </head>
 
 <body>
-	<header class="main-header">
-		<nav class="main-navigation">
-			<img src="/img/logo.svg" alt="Логотип Gllasy Shop" class="logo" width="" height="">
-			<ul class="main-menu">
-				<li class="menu-item menu-item-opened ">Каталог</li>
-				<li class="menu-item">
-					<a href="#">Доставка и оплата</a>
+	<div class="background">
+		<header class="main-header">
+			<nav class="main-navigation">
+				<img src="/img/logo.svg" alt="Логотип Gllasy Shop" class="logo" width="" height="">
+				<ul class="main-menu">
+					<li class="menu-item menu-item-opened ">Каталог
+						<ul class="menu-item-itemed"><!--Создал вложенное меню-->
+							<li class="itemed itemed-new">
+								<a href="#">Новинки</a>
+							</li>
+							<li class="itemed">
+								<a href="#">Сливочное</a>
+							</li>
+							<li class="itemed">
+								<a href="#">Щербеты</a>
+							</li>
+							<li class="itemed">
+								<a href="#">Фруктиовый лед</a>
+							</li>
+							<li class="itemed">
+								<a href="#">Мелонин</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu-item">
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li class="menu-item">
+						<a href="#">О компании</a>
+					</li>
+				</ul>
+				<ul class="user-navigation">
+					<li class="search">
+						<a href="#"></a>
+					</li>
+					<li class="login">
+						<a href="#">Вход</a>
+					</li>
+					<li class="user-basket">
+						<a href="#">2 товара</a>
+						<section class="basket-list">
+							<table>
+								<tr>
+									<td>X</td>
+									<td>
+										<img class="basket-image" src="/img..." alt="Товар-1">
+									</td>
+									<td>Пломбир с апельсиновым джемом</td>
+									<td>1,5 кг x
+										<span class="kg">200 руб</span>
+									</td>
+									<td>300 руб.</td>
+								</tr>
+								<tr>
+									<td>X</td>
+									<td>
+										<img class="basket-image" src="/img..." alt="Товар-2">
+									</td>
+									<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+									<td>1,5 кг x
+										<span class="kg">200 руб</span>
+									</td>
+									<td>450 руб.</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>Итого:750 руб.</td>
+								</tr>
+							</table>
+							<a href="#" class="button">Оформить заказ</a>
+						</section>
+					</li>
+				</ul>
+			</nav>
+			<div class="info">
+				<p>С 10 до 20, ежедневно
+					<br>
+					<b>8 812 450-25-25</b>
+				</p>
+			</div>
+		</header>
+		<main class="container">
+			<ul class="breadcrums">
+				<li class="breadcrums-item">
+					<a href="index.html">Главная</a>
 				</li>
-				<li class="menu-item">
-					<a href="#">О компании</a>
+				<li class="breadcrums-item">
+					<a href="catalog.html">Каталог</a>
 				</li>
+				<li class="breadcrums-item">Сливочное</li>
 			</ul>
-			<ul class="user-navigation">
-				<li class="search">
-					<a href="#"></a>
-				</li>
-				<li class="login">
-					<a href="#">Вход</a>
-				</li>
-				<li class="user-basket">
-					<a href="#">2 товара</a>
-					<section class="basket-list">
-						<table>
-							<tr>
-								<td>X</td>
-								<td>
-									<img class="basket-image" src="/img..." alt="Товар-1">
-								</td>
-								<td>Пломбир с апельсиновым джемом</td>
-								<td>1,5 кг x
-									<span class="kg">200 руб</span>
-								</td>
-								<td>300 руб.</td>
-							</tr>
-							<tr>
-								<td>X</td>
-								<td>
-									<img class="basket-image" src="/img..." alt="Товар-2">
-								</td>
-								<td>Клубничный пломбир с присыпкой из белого шоколада</td>
-								<td>1,5 кг x
-									<span class="kg">200 руб</span>
-								</td>
-								<td>450 руб.</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>Итого:750 руб.</td>
-							</tr>
-						</table>
-						<a href="#" class="button">Оформить заказ</a>
-					</section>
-				</li>
-			</ul>
-		</nav>
-		<div class="info">
-			<p>С 10 до 20, ежедневно
-				<br>
-				<b>8 812 450-25-25</b>
-			</p>
-		</div>
-	</header>
-	<main class="container">
-		<ul class="breadcrums">
-			<li class="breadcrums-item">
-				<a href="index.html">Главная</a>
-			</li>
-			<li class="breadcrums-item">
-				<a href="catalog.html">Каталог</a>
-			</li>
-			<li class="breadcrums-item">Сливочное</li>
-		</ul>
-		<section class="filters">
-			<h1>Сливочное мороженное</h1>
-			<h2 class="visualy-hidden">Фильтр товаров
-				<!--Здесь будет форма-->
-			</h2>
+			<section class="filters">
+				<h1>Сливочное мороженное</h1>
+				<h2 class="visualy-hidden">Фильтр товаров
+					<!--Здесь будет форма-->
+				</h2>
+			</section>
+			<section class="catalog">
+				<h2 class="visualy-hidden">Список товаров</h2>
+				<ul class="advantages-list">
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item"><!--Оформил ссылки-->
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">310₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">380₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочно-кофейное с кусочками шоколада</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">355₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">415₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное крем-брюле с карамельной подливкой</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">325₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное с брусничным джемом</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">410₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочно-черничное с цельными ягодами черники</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">375₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочно-лимонное с карамельной присыпкой</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">320₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное с шоколадной стружкой</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">440₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочно-ванильное с кусочками шоколада</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">435₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное с ментоловым сиропом</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">355₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное с кусочками черного шоколада</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+					<li class="advantages-item">
+						<a href="#" class="hit-advantages-item">
+							<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
+							<div class="hit-price-weight">
+								<span class="hit-price">420₽</span>
+								<span class="hit-weight">кг</span>
+							</div>
+						</a>
+						<h3>
+							<a href="" class="hit-link">Сливочное с мятным сиропом</a>
+						</h3>
+						<a href="#" class="button-default">Быстрый просмотр</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<section class="footer-social">
+				<h2 class="visualy-hidden">Мы в социальных сетях</h2>
+				<ul class="social-network">
+					<li class="social-item">
+						<a href="#">Твитер</a>
+					</li>
+					<li class="social-item">
+						<a href="#">Инстаграмм</a>
+					</li>
+					<li class="social-item">
+						<a href="#">Фейсбук</a>
+					</li>
+					<li class="social-item">
+						<a href="#">Вконтакте</a>
+					</li>
+				</ul>
+			</section>
+			<section class="documents">
+				<h2 class="visualy-hidden">Юридическая информация</h2>
+				<ul class="info-comany">
+					<li class="info-company-item bold">
+						<a href="#">Для поставщиков</a>
+					</li>
+					<li class="info-company-item">
+						<a href="#">О производстве</a>
+					</li>
+					<li class="info-company-item">
+						<a href="#">Наши документы</a>
+					</li>
+					<li class="info-company-item">
+						<a href="#">Экологические стандарты</a>
+					</li>
+				</ul>
+			</section>
+			<section class="author">
+				<a href="https://up.htmlacademy.ru/htmlcss/19" class="html-academy">
+					<img src="/img/..." alt="HTML ACADEMY">
+				</a>
+				<span>Сделано в
+					<a href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>&copy2017</span>
+			</section>
+		</footer>
+		<section class="modal-modal-link"><!--Добавил форму входа и форму поиска для едиообразия-->
+			<!--Здесь будет форма входа -->
 		</section>
-		<section class="catalog">
-			<h2 class="visualy-hidden">Список товаров</h2>
-			<ul class="advantages-list">
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">380₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">350₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочно-кофейное с кусочками шоколада</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">355₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">415₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное крем-брюле с карамельной подливкой</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">325₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное с брусничным джемом</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">410₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочно-черничное с цельными ягодами черники</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">375₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочно-лимонное с карамельной присыпкой</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">320₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное с шоколадной стружкой</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">440₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочно-ванильное с кусочками шоколада</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">435₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное с ментоловым сиропом</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">355₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное с кусочками черного шоколада</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-				<li class="advantages-item">
-					<a href="#" class="hit-advantages-item">
-						<img src="/img/..." alt="Картинка с мороженным" wight="204" height="203">
-						<div class="hit-price-weight">
-							<span class="hit-price">420₽</span>
-							<span class="hit-weight">кг</span>
-							<h3>
-								<a href="#" class="hit-link">Сливочное с мятным сиропом</a>
-							</h3>
-							<a href="#" class="button-default">Быстрый просмотр</a>
-						</div>
-					</a>
-				</li>
-			</ul>
-			<ul class="pagination-list">
-				<li class="pagination-item pagination-item-opened">
-					1
-				</li>
-				<li class="pagination-item">
-					<a href="#">2</a>
-				</li>
-				<li class="pagination-item">
-					<a href="#">3</a>
-				</li>
-				<li class="pagination-item">
-					<a href="#">4</a>
-				</li>
-				<li class="pagination-item">
-					<a href="#">5</a>
-				</li>
-			</ul>
+		<section class="modal modal-search">
+			<!--Здесь будет форма поиска-->
 		</section>
-	</main>
-	<footer class="main-footer">
-		<section class="footer-social">
-			<h2 class="visualy-hidden">Мы в социальных сетях</h2>
-			<ul class="social-network">
-				<li class="social-item">
-					<a href="#">Твитер</a>
-				</li>
-				<li class="social-item">
-					<a href="#">Инстаграмм</a>
-				</li>
-				<li class="social-item">
-					<a href="#">Фейсбук</a>
-				</li>
-				<li class="social-item">
-					<a href="#">Вконтакте</a>
-				</li>
-			</ul>
-		</section>
-		<section class="documents">
-			<h2 class="visualy-hidden">Юридическая информация</h2>
-			<ul class="info-comany">
-				<li class="info-company-item bold">
-					<a href="#">Для поставщиков</a>
-				</li>
-				<li class="info-company-item">
-					<a href="#">О производстве</a>
-				</li>
-				<li class="info-company-item">
-					<a href="#">Наши документы</a>
-				</li>
-				<li class="info-company-item">
-					<a href="#">Экологические стандарты</a>
-				</li>
-			</ul>
-		</section>
-		<section class="author">
-			<a href="https://up.htmlacademy.ru/htmlcss/19" class="html-academy">
-				<img src="/img/..." alt="HTML ACADEMY">
-			</a>
-			<span>Сделано в
-				<a href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>&copy2017</span>
-		</section>
-	</footer>
+	</div>
 </body>
 
 </html>

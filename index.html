@@ -7,25 +7,6 @@
 </head>
 
 <body>
-	<style>
-		/*       .slide-radio {visibility: hidden}*/
-
-		.slide {
-			display: none
-		}
-
-		#slide-1:checked~.background .slide-1 {
-			display: block;
-		}
-
-		#slide-2:checked~.background .slide-2 {
-			display: block;
-		}
-
-		#slide-3:checked~.background .slide-3 {
-			display: block;
-		}
-	</style>
 	<input type="radio" id="slide-1" name="slide-radio" checked class="slide-radio">
 	<input type="radio" id="slide-2" name="slide-radio" class="slide-radio">
 	<input type="radio" id="slide-3" name="slide-radio" class="slide-radio">
@@ -34,7 +15,7 @@
 			<nav class="main-navigation">
 				<img src="/img/..." alt="Логотип Gllasy Shop" class="logo" width="157" height="64">
 				<ul class="main-menu">
-					<li class="menu-item ">
+					<li class="menu-item menu-item-opened "><!--Сделал единообразным вложенное меню-->
 						<a href="catalog.html">Каталог</a>
 						<ul class="menu-item-itemed">
 							<li class="itemed itemed-new">
@@ -79,7 +60,9 @@
 					<b>8 812 450-25-25</b>
 				</p>
 			</div>
-			<div class="slider">
+		</header>
+		<main>
+			<div class="slider"><!--Вынес слайдер в блок main-->
 				<div class="slider-buttons">
 					<label for="slide-1"></label>
 					<label for="slide-2"></label>
@@ -97,8 +80,6 @@
 					</div>
 				</div>
 			</div>
-		</header>
-		<main>
 			<h1 class="visuali-hidden">Основная информация</h1>
 			<div class="actions">
 				<h2 class="visualy-hidden">Наши акции</h2>
@@ -120,7 +101,7 @@
 			<section class="products">
 				<h2 class="visualy-hidden">Товары</h2>
 				<ul class="list-product">
-					<li class="product-item">
+					<li class="product-item"><!--Теперь код карточки товара на двух страницах единообразен-->
 						<a href="#" class="hit-advantages-item">
 							<img src="/img/..." alt="Картинка с мороженным" width="204" height="203">
 							<div class="hit-price-weight">
@@ -273,7 +254,7 @@
 			</section>
 		</footer>
 		<section class="modal-modal-link">
-			<!--Здесь будет форма-->
+			<!--Здесь будет форма входа -->
 		</section>
 		<section class="modal modal-search">
 			<!--Здесь будет форма поиска-->
@@ -281,7 +262,7 @@
 		<section class="modal contact-form-modal">
 			<h2>Мы обязательно вам ответим!</h2>
 			<span class="close">X</span>
-			<!--Здесь будет форма-->
+			<!--Здесь будет форма обратной связи-->
 		</section>
 	</div>
 </body </html>
