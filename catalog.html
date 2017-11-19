@@ -10,7 +10,9 @@
 	<div class="background">
 		<header class="main-header">
 			<nav class="main-navigation">
-				<img src="img/logo.svg" alt="Логотип Gllasy Shop" class="logo">
+				<a href="index.html">
+					<img src="img/logo.svg" alt="Логотип Gllasy Shop" class="logo">
+				</a>
 				<ul class="main-menu">
 					<li class="menu-item menu-item-opened ">Каталог
 						<ul class="menu-item-itemed"><!--Создал вложенное меню-->
@@ -40,17 +42,19 @@
 				</ul>
 				<ul class="user-navigation">
 					<li class="search">
-						<a href="#"></a>
+						<button class="search-button" type="button" aria-label="Поиск">Поиск</button>
 					</li>
-					<li class="login">
-						<a href="#">Вход</a>
+					<li class="login-link">
+						<a class="login-link" href="">Вход</a>
 					</li>
 					<li class="user-basket">
 						<a href="#">2 товара</a>
 						<section class="basket-list">
 							<table>
 								<tr>
-									<td>X</td>
+									<td>
+										<button class="modal-close" type="submit">Закрыть</button>
+									</td>
 									<td>
 										<img class="basket-image" src="/img..." alt="Товар-1">
 									</td>
@@ -61,7 +65,9 @@
 									<td>300 руб.</td>
 								</tr>
 								<tr>
-									<td>X</td>
+									<td>
+										<button class="modal-close" type="submit">Закрыть</button>
+									</td>
 									<td>
 										<img class="basket-image" src="/img..." alt="Товар-2">
 									</td>
@@ -79,7 +85,7 @@
 									<td>Итого:750 руб.</td>
 								</tr>
 							</table>
-							<a href="#" class="button">Оформить заказ</a>
+							<button class="button" type="submit">Оформить заказ</button>
 						</section>
 					</li>
 				</ul>
@@ -103,9 +109,63 @@
 			</ul>
 			<section class="filters">
 				<h1>Сливочное мороженное</h1>
-				<h2 class="visualy-hidden">Фильтр товаров
-					<!--Здесь будет форма-->
-				</h2>
+				<h2 class="visualy-hidden">Фильтр товаров</h2>
+				<form action="https://echo.htmlacademy.ru" class="filter" method="get">
+					<div class="sorting">
+						<label for="sorting">Сортировка:</label>
+						<select name="sorting-tovar" id="sorting">
+							<option value="in-popularity">по популярности</option>
+							<option value="budget">сначала недорогие</option>
+							<option value="expensive">сначала дорогие</option>
+							<option value="fats">по жирности</option>
+						</select>
+					</div>
+					<div class="pricing">
+						<!--Здесь будет форма с двумя ползунками-->	
+						<div class="custom-range">
+							<p class="range-header">
+								Цена
+								<span class="">100</span> руб. -
+								<span class="">500</span> руб.
+							</p>
+							<!-- от -->
+							<input class="visually-hidden">
+							<!-- до -->
+							<input class="visually-hidden">
+							<div class="range-line">
+								<button class="range-control" style="left: 40px;"></button>
+								<button class="range-control" style="right: 40px;"></button>
+							</div>
+						</div>
+					</div>
+					<fieldset class="fat-container">
+						<legend>Жирность</legend>
+							<input type="radio" name="fat-sorting" id="fat-0" value="0%">
+							<label for="fat-0">0%</label>
+							<input type="radio" name="fat-sorting" id="fat-10" value="до 10%" checked>
+							<label for="fat-10">до 10%</label>
+							<input type="radio" name="fat-sorting" id="fat-30" value="до 30%">
+							<label for="fat-30">до 30%</label>
+							<input type="radio" name="fat-sorting" id="fat-big" value="выше 30%">
+							<label for="выше 30%">выше 30%</label>
+					</fieldset>
+					<fieldset class="stuffing-container">
+						<legend>Наполнители</legend>
+							<input type="checkbox" name="chockolate" id="stuffing-checkbox-1" checked>
+							<label for="stuffing-checkbox-1">шоколадные</label>
+							<input type="checkbox" name="sugar-powder" id="stuffing-checkbox-2" checked>
+							<label for="stuffing-checkbox-2">сахарные присыпки</label>
+							<input type="checkbox" name="fructs" id="stuffing-checkbox-3">
+							<label for="stuffing-checkbox-3">фрукты</label>
+							<input type="checkbox" name="syrups" id="stuffing-checkbox-4">
+							<label for="stuffing-checkbox-4">сиропы</label>
+							<input type="checkbox" name="djems" id="stuffing-checkbox-5">
+							<label for="stuffing-checkbox-5">джемы</label>
+					</fieldset>
+					<div class="div">
+						<input type="button" value="Применить">
+					</div>
+				</form>
 			</section>
 			<section class="catalog">
 				<h2 class="visualy-hidden">Список товаров</h2>
@@ -121,7 +181,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -134,7 +194,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-кофейное с кусочками шоколада</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -147,7 +207,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -160,7 +220,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное крем-брюле с карамельной подливкой</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -173,7 +233,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с брусничным джемом</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -186,7 +246,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-черничное с цельными ягодами черники</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -199,7 +259,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-лимонное с карамельной присыпкой</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -212,7 +272,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с шоколадной стружкой</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -225,7 +285,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-ванильное с кусочками шоколада</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -238,7 +298,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с ментоловым сиропом</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -251,7 +311,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с кусочками черного шоколада</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -264,7 +324,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с мятным сиропом</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 				</ul>
 			</section>
@@ -312,11 +372,31 @@
 					<a href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>&copy2017</span>
 			</section>
 		</footer>
-		<section class="modal-modal-link"><!--Добавил форму входа и форму поиска для едиообразия-->
-			<!--Здесь будет форма входа -->
+		<section class="modal modal-link">
+			<h2 class="visualy-hidden">Личный кабинет</h2>
+			<form action="#" class="login-form" method="post">
+				<p>
+					<label class="visualy-hidden" for="user-login">Логин
+						<input class="login-icon-user" id="user-login" type="text" placeholder="Электронная почта">
+					</label>
+				</p>
+				<p>
+					<label class="visually-hidden" for="user-password">Пароль
+						<input class="login-icon-password" id="user-password" type="password" placeholder="Пароль">
+					</label>
+				</p>
+				<p>
+					<button class="button" type="submit">Войти</button>
+					<a href="" class="restore">Забыли пароль?</a>
+					<a href="" class="restore">Новая регистрация</a>
+				</p>
+			</form>
 		</section>
 		<section class="modal modal-search">
-			<!--Здесь будет форма поиска-->
+			<form action="#" class="search-form" metgod="post">
+				<label class="visualy-hidden" for="search">Поле поиска</label>
+				<input type="search" name="search" id="search">
+			</form>
 		</section>
 	</div>
 </body>

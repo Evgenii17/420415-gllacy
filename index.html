@@ -15,7 +15,7 @@
 			<nav class="main-navigation">
 				<img src="img/logo.svg" alt="Логотип Gllasy Shop" class="logo" width="157" height="64">
 				<ul class="main-menu">
-					<li class="menu-item menu-item-opened "><!--Сделал единообразным вложенное меню-->
+					<li class="menu-item menu-item-opened ">
 						<a href="catalog.html">Каталог</a>
 						<ul class="menu-item-itemed">
 							<li class="itemed itemed-new">
@@ -44,13 +44,13 @@
 				</ul>
 				<ul class="user-navigation">
 					<li class="search">
-						<a href="#">Поиск</a>
+						<button class="search-button" type="button" aria-label="Поиск">Поиск</button>
 					</li>
-					<li class="login">
-						<a href="#">Вход</a>
+					<li class="login-link">
+						<a class="login-link" href="#">Вход</a>
 					</li>
 					<li class="user-basket">
-						<a href="#">Пусто</a>
+						<a class="user-basket" href="#" aria-label="Корзина">Пусто</a>
 					</li>
 				</ul>
 			</nav>
@@ -62,7 +62,7 @@
 			</div>
 		</header>
 		<main>
-			<div class="slider"><!--Вынес слайдер в блок main-->
+			<div class="slider">
 				<div class="slider-buttons">
 					<label for="slide-1"></label>
 					<label for="slide-2"></label>
@@ -101,7 +101,7 @@
 			<section class="products">
 				<h2 class="visualy-hidden">Товары</h2>
 				<ul class="list-product">
-					<li class="product-item"><!--Теперь код карточки товара на двух страницах единообразен-->
+					<li class="product-item">
 						<a href="#" class="hit-advantages-item">
 							<img src="img/orange.jpg" alt="Картинка с мороженным" width="267" height="267">
 							<div class="hit-price-weight">
@@ -112,7 +112,7 @@
 						<h3>
 							<a href="#" class="hit-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="product-item">
 						<a href="#" class="hit-advantages-item">
@@ -125,7 +125,7 @@
 						<h3>
 							<a href="#" class="hit-link">Сливочно-кофейное с кусочками шоколада</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="product-item">
 						<a href="#" class="hit-advantages-item">
@@ -138,7 +138,7 @@
 						<h3>
 							<a href="#" class="hit-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 					<li class="product-item">
 						<a href="#" class="hit-advantages-item">
@@ -149,9 +149,9 @@
 							</div>
 						</a>
 						<h3>
-							<a href="#" class="hit-link">Сливочное крем-брюле с карамельно подливкой</a>
+							<a href="#" class="hit-link">Сливочное крем-брюле с карамельной подливкой</a>
 						</h3>
-						<a href="#" class="button-default">Быстрый просмотр</a>
+						<button class="button-default" type="submit">Быстрый просмотр</button>
 					</li>
 				</ul>
 			</section>
@@ -189,7 +189,11 @@
 					и не слать всякой ненужной ерунды. Честно =)
 				</p>
 				<div class="form">
-					<!--Здесь будет форма-->
+					<form action="#" method="post">
+						<label class="visualy-hidden" for="form-email">Поле для ввода электронной почты</label>
+						<input type="email" name="email" id="form-email">
+						<input type="submit" value="Отправить">
+					</form>   
 				</div>
 			</section>
 			<div class="cards-info">
@@ -253,16 +257,50 @@
 					<a href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>&copy2017</span>
 			</section>
 		</footer>
-		<section class="modal-modal-link">
-			<!--Здесь будет форма входа -->
+		<section class="modal modal-link">
+			<h2 class="visualy-hidden">Личный кабинет</h2>
+			<form action="#" class="login-form" method="post">
+				<p>
+					<label class="visualy-hidden" for="user-login">Логин</label>
+					<input class="login-icon-user" id="user-login" type="text" placeholder="Электронная почта">
+				</p>
+				<p>
+					<label class="visually-hidden" for="user-password">Пароль</label>
+					<input class="login-icon-password" id="user-password" type="password" placeholder="Пароль">
+				</p>
+				<p>
+					<button class="button" type="submit">Войти</button>
+					<a href="" class="restore">Забыли пароль?</a>
+					<a href="" class="restore">Новая регистрация</a>
+				</p>
+			</form>
 		</section>
 		<section class="modal modal-search">
-			<!--Здесь будет форма поиска-->
+			<form action="#" class="search-form" metgod="post">
+				<label class="visualy-hidden" for="search">Поле поиска</label>
+				<input type="search" name="search" id="search">
+			</form>
 		</section>
 		<section class="modal contact-form-modal">
 			<h2>Мы обязательно вам ответим!</h2>
-			<span class="close">X</span>
-			<!--Здесь будет форма обратной связи-->
+			<button class="close" type="submit">Закрыть</button>
+			<form action="#" method="post" name="user-info">
+				<p>
+					<label class="visualy-hidden" for="name">Как вас зовут?
+						<input type="text" name="you-name" id="name" placeholder=""Как вас зовут?>
+					</label>
+				</p>
+				<p>
+					<label class="visualy-hidden" for="mail">Ваш электронный адрес
+						<input type="email" name="you-mail" id="mail" placeholder="Ваша почта для ответа?">
+					</label>
+				</p>
+				<p>
+					<label class="visualy-hidden" for="user-info">Краткая информация о себе<br>
+						<textarea name="info" id="user-info" cols="30" rows="10">Напишите что-нибудь...</textarea>
+					</label>
+				</p>
+			</form>
 		</section>
 	</div>
 </body </html>
