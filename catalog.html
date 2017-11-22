@@ -15,12 +15,12 @@
 				</a>
 				<ul class="main-menu">
 					<li class="menu-item menu-item-opened ">Каталог
-						<ul class="menu-item-itemed"><!--Создал вложенное меню-->
+						<ul class="menu-item-itemed">
 							<li class="itemed itemed-new">
 								<a href="#">Новинки</a>
 							</li>
 							<li class="itemed">
-								<a href="#">Сливочное</a>
+								<a href="catalog.html">Сливочное</a><!--Должен ссылаться на станицу каталога-->
 							</li>
 							<li class="itemed">
 								<a href="#">Щербеты</a>
@@ -43,20 +43,47 @@
 				<ul class="user-navigation">
 					<li class="search">
 						<button class="search-button" type="button" aria-label="Поиск">Поиск</button>
+						<section class="modal modal-search">
+							<form action="Glassy.com" class="forms form-search" metgod="get">
+								<label class="visualy-hidden" for="search">Поле поиска</label>
+								<input type="search" name="search" id="search" placeholder="Что ищем? ">
+							</form>
+						</section>
 					</li>
 					<li class="login-link">
-						<a class="login-link" href="">Вход</a>
+						<button class="login-link" type="button">Вход</button>
+						<section class="modal modal-link">
+							<h2 class="visualy-hidden">Личный кабинет</h2>
+							<form action="#" class="forms form-link" method="post">
+								<p>
+									<label class="visualy-hidden" for="user-login">Логин
+										<input class="login-icon-user" id="user-login" type="text" placeholder="Электронная почта">
+									</label>
+								</p>
+								<p>
+									<label class="visually-hidden" for="user-password">Пароль
+										<input class="login-icon-password" id="user-password" type="password" placeholder="Пароль">
+									</label>
+								</p>
+							</form>
+							<p>
+								<button class="button" type="submit">Войти</button>
+								<a href="#" class="restore">Забыли пароль?</a>
+								<a href="#" class="restore">Новая регистрация</a>
+							</p>
+						</section>
 					</li>
 					<li class="user-basket">
-						<a href="#">2 товара</a>
+						<h2 class="visually-hidden">Корзина</h2>
+						<a href="basket.html">2 товара</a>
 						<section class="basket-list">
 							<table>
 								<tr>
 									<td>
-										<button class="modal-close" type="submit">Закрыть</button>
+										<button class="modal-close" type="button">Закрыть</button>
 									</td>
 									<td>
-										<img class="basket-image" src="/img..." alt="Товар-1">
+										<img class="basket-image" src="img/orange.jpg" width="37" height="33" alt="Товар-1">
 									</td>
 									<td>Пломбир с апельсиновым джемом</td>
 									<td>1,5 кг x
@@ -69,7 +96,7 @@
 										<button class="modal-close" type="submit">Закрыть</button>
 									</td>
 									<td>
-										<img class="basket-image" src="/img..." alt="Товар-2">
+										<img class="basket-image" src="img/strawberry.jpg" width="37" height="33" alt="Товар-2">
 									</td>
 									<td>Клубничный пломбир с присыпкой из белого шоколада</td>
 									<td>1,5 кг x
@@ -110,8 +137,8 @@
 			<section class="filters">
 				<h1>Сливочное мороженное</h1>
 				<h2 class="visualy-hidden">Фильтр товаров</h2>
-				<form action="https://echo.htmlacademy.ru" class="filter" method="get">
-					<div class="sorting">
+				<form action="https://echo.Glassy.com" class="filter-price" method="get">
+					<div class="filters-container">
 						<label for="sorting">Сортировка:</label>
 						<select name="sorting-tovar" id="sorting">
 							<option value="in-popularity">по популярности</option>
@@ -120,7 +147,7 @@
 							<option value="fats">по жирности</option>
 						</select>
 					</div>
-					<div class="pricing">
+					<div class="filters-container">
 						<!--Здесь будет форма с двумя ползунками-->	
 						<div class="custom-range">
 							<p class="range-header">
@@ -128,17 +155,13 @@
 								<span class="">100</span> руб. -
 								<span class="">500</span> руб.
 							</p>
-							<!-- от -->
-							<input class="visually-hidden">
-							<!-- до -->
-							<input class="visually-hidden">
 							<div class="range-line">
 								<button class="range-control" style="left: 40px;"></button>
 								<button class="range-control" style="right: 40px;"></button>
 							</div>
 						</div>
 					</div>
-					<fieldset class="fat-container">
+					<fieldset class="filters-container">
 						<legend>Жирность</legend>
 							<input type="radio" name="fat-sorting" id="fat-0" value="0%">
 							<label for="fat-0">0%</label>
@@ -149,7 +172,7 @@
 							<input type="radio" name="fat-sorting" id="fat-big" value="выше 30%">
 							<label for="выше 30%">выше 30%</label>
 					</fieldset>
-					<fieldset class="stuffing-container">
+					<fieldset class="filters-container">
 						<legend>Наполнители</legend>
 							<input type="checkbox" name="chockolate" id="stuffing-checkbox-1" checked>
 							<label for="stuffing-checkbox-1">шоколадные</label>
@@ -162,7 +185,7 @@
 							<input type="checkbox" name="djems" id="stuffing-checkbox-5">
 							<label for="stuffing-checkbox-5">джемы</label>
 					</fieldset>
-					<div class="div">
+					<div class="button button-container">
 						<input type="button" value="Применить">
 					</div>
 				</form>
@@ -171,7 +194,7 @@
 				<h2 class="visualy-hidden">Список товаров</h2>
 				<ul class="advantages-list">
 					<li class="advantages-item">
-						<a href="#" class="hit-advantages-item"><!--Оформил ссылки-->
+						<a href="#" class="hit-advantages-item">
 							<img src="img/orange.jpg" alt="Картинка с мороженным" wight="267" height="267">
 							<div class="hit-price-weight">
 								<span class="hit-price">310₽</span>
@@ -181,7 +204,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -194,7 +217,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-кофейное с кусочками шоколада</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -207,7 +230,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-клубничное с присыпкой из белого шоколада</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -220,7 +243,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное крем-брюле с карамельной подливкой</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -233,7 +256,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с брусничным джемом</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -246,7 +269,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-черничное с цельными ягодами черники</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -259,7 +282,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-лимонное с карамельной присыпкой</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -272,7 +295,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с шоколадной стружкой</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -285,7 +308,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочно-ванильное с кусочками шоколада</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -298,7 +321,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с ментоловым сиропом</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -311,7 +334,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с кусочками черного шоколада</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 					<li class="advantages-item">
 						<a href="#" class="hit-advantages-item">
@@ -324,7 +347,7 @@
 						<h3>
 							<a href="" class="hit-link">Сливочное с мятным сиропом</a>
 						</h3>
-						<button class="button-default" type="submit">Быстрый просмотр</button>
+						<button class="button-default" type="button">Быстрый просмотр</button>
 					</li>
 				</ul>
 			</section>
@@ -372,33 +395,6 @@
 					<a href="https://up.htmlacademy.ru/htmlcss/19">HTML Academy</a>&copy2017</span>
 			</section>
 		</footer>
-		<section class="modal modal-link">
-			<h2 class="visualy-hidden">Личный кабинет</h2>
-			<form action="#" class="login-form" method="post">
-				<p>
-					<label class="visualy-hidden" for="user-login">Логин
-						<input class="login-icon-user" id="user-login" type="text" placeholder="Электронная почта">
-					</label>
-				</p>
-				<p>
-					<label class="visually-hidden" for="user-password">Пароль
-						<input class="login-icon-password" id="user-password" type="password" placeholder="Пароль">
-					</label>
-				</p>
-				<p>
-					<button class="button" type="submit">Войти</button>
-					<a href="" class="restore">Забыли пароль?</a>
-					<a href="" class="restore">Новая регистрация</a>
-				</p>
-			</form>
-		</section>
-		<section class="modal modal-search">
-			<form action="#" class="search-form" metgod="post">
-				<label class="visualy-hidden" for="search">Поле поиска</label>
-				<input type="search" name="search" id="search">
-			</form>
-		</section>
 	</div>
 </body>
-
 </html>
